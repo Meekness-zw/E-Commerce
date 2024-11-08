@@ -41,7 +41,7 @@ const Navbar = () => {
                 <div className="absolute left-0 top-full mt-2 w-48 bg-white shadow-lg rounded-md">
                   <ul className="space-y-2 p-3">
                     <li>
-                      <Link href="/">Shop All</Link>
+                      <Link href="/shop">Shop All</Link>
                     </li>
                     <li>
                       <Link href="/">Men</Link>
@@ -49,16 +49,13 @@ const Navbar = () => {
                     <li>
                       <Link href="/">Women</Link>
                     </li>
-                    <li>
-                      <Link href="/">Accessories</Link>
-                    </li>
                   </ul>
                 </div>
               )}
             </div>
-            <Link href="/">On Sale</Link>
-            <Link href="/">New Arrivals</Link>
-            <Link href="/">Brands</Link>
+            <Link href="/on sale">On Sale</Link>
+            <Link href="/new arrivals">New Arrivals</Link>
+            <Link href="/brands">Brands</Link>
           </div>
         </div>
         <div className="flex items-center space-x-4 lg:mr-10">

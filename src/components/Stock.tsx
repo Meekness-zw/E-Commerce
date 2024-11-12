@@ -14,9 +14,9 @@ interface StockProps {
 
 function Stock({ item, imgAlt, type, star, rating, cost, discount, markoff }: StockProps) {
     return (
-        <div className="ml-10">
-            <div className="w-[80%] rounded-[10px] mx-auto">
-                <Image src={item} alt={imgAlt} className="w-[400px]" />
+        <div className="lg:w-[30%] flex flex-col ">
+            <div className="rounded-[10px] mx-auto">
+                <Image src={item} alt={imgAlt} className="" />
             </div>
             <h1 className="text-[23px] font-semibold">{type}</h1>
             <div className="flex space-x-3">

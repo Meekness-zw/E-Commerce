@@ -1,20 +1,25 @@
-'use client'
-import React, { useState } from 'react'
-import MobileNav from './MobileNav'
-import { FaSearch, FaShoppingCart, FaUser, FaChevronDown } from 'react-icons/fa'
-import Link from 'next/link'
+"use client";
+import React, { useState } from "react";
+import MobileNav from "./MobileNav";
+import {
+  FaSearch,
+  FaShoppingCart,
+  FaUser,
+  FaChevronDown,
+} from "react-icons/fa";
+import Link from "next/link";
 
 const Navbar = () => {
-  const [isShopOpen, setIsShopOpen] = useState(false)
-  const [searchTerm, setSearchTerm] = useState('')
+  const [isShopOpen, setIsShopOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const toggleShopAccordion = () => {
-    setIsShopOpen(!isShopOpen)
-  }
+    setIsShopOpen(!isShopOpen);
+  };
 
   const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value)
-  }
+    setSearchTerm(e.target.value);
+  };
 
   return (
     <div>
@@ -29,12 +34,22 @@ const Navbar = () => {
       <div className="flex items-center justify-between px-4 p-5">
         <div className="flex items-center space-x-5">
           <MobileNav />
-          <h1 className="md:text-[25px] text-[20px] font-extrabold">SHOP.CO</h1>
+          <Link href='/'>
+            <h1 className="md:text-[25px] text-[20px] font-extrabold">
+              SHOP.CO
+            </h1>
+          </Link>
+
           <div className="font-bold space-x-5 hidden lg:flex items-center pt-2 pl-10">
-            <div className="relative flex items-center cursor-pointer" onClick={toggleShopAccordion}>
+            <div
+              className="relative flex items-center cursor-pointer"
+              onClick={toggleShopAccordion}
+            >
               <Link href="/">Shop</Link>
               <FaChevronDown
-                className={`ml-2 transform transition-transform ${isShopOpen ? 'rotate-180' : ''}`}
+                className={`ml-2 transform transition-transform ${
+                  isShopOpen ? "rotate-180" : ""
+                }`}
                 title="Toggle Shop Menu"
               />
               {isShopOpen && (
@@ -53,8 +68,8 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            <Link href="/on sale">On Sale</Link>
-            <Link href="/new arrivals">New Arrivals</Link>
+            <Link href="/onSale">On Sale</Link>
+            <Link href="/newArrivals">New Arrivals</Link>
             <Link href="/brands">Brands</Link>
           </div>
         </div>
@@ -83,7 +98,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

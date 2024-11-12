@@ -7,19 +7,19 @@ import { CiMenuBurger } from "react-icons/ci"
 const links = [
     {
         name: 'Shop',
-        path: '/',
+        path: '/shop',
     },
     {
         name: 'On Sale',
-        path: '/',
+        path: '/onSale',
     },
     {
         name: 'New Arrivals',
-        path: '/',
+        path: '/newArrival',
     },
     {
         name: 'Brands',
-        path: '/',
+        path: '/brands',
     },
 ]
 

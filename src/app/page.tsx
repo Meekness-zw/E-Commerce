@@ -18,7 +18,7 @@ import gym from "../../public/images/dress-style-4.svg";
 import Reviews from "@/components/Reviews";
 import check from "../../public/images/Verified.svg";
 
-import Slider from "react-slick"; // Importing react-slick for carousel functionality
+ // Importing react-slick for carousel functionality
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Importing arrows from react-icons
@@ -336,3 +336,4 @@ function Page() {
 }
 
 export default Page;
+
